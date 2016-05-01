@@ -8,7 +8,10 @@
 # To undo the effect of this function, you can type "cd -" to return to the
 # original directory.
 
-export PATH=$PATH:$PEARL_PKGDIR/module/scripts
+if [[ $PATH != *"${PEARL_PKGDIR}/module/scripts"* ]]
+then
+    PATH=$PATH:$PEARL_PKGDIR/module/scripts
+fi
 
 # cd to last path after exit
 # This functionallows to change the directory 

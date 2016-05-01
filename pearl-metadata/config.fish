@@ -7,7 +7,10 @@
 # To undo the effect of this function, you can type "cd -" to return to the
 # original directory.
 
-set PATH $PATH $PEARL_PKGDIR/module/scripts
+if not contains $PEARL_PKGDIR/module/scripts $PATH
+    set PATH $PATH $PEARL_PKGDIR/module/scripts
+end
+
 
 # cd to last path after exit
 # This functionallows to change the directory 
