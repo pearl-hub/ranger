@@ -7,11 +7,6 @@
 # To undo the effect of this function, you can type "cd -" to return to the
 # original directory.
 
-if not contains $PEARL_PKGDIR/module/scripts $PATH
-    set PATH $PATH $PEARL_PKGDIR/module/scripts
-end
-
-
 # cd to last path after exit
 # This functionallows to change the directory 
 # to the last visited one after ranger quits.
