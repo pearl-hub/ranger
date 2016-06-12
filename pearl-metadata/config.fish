@@ -40,7 +40,7 @@
 #end
 
 # This binds Ctrl-O to ranger-cd:
-bind \co 'ranger'
+#bind \co 'ranger'
 
 # TODO for fish
 #[ -n "$RANGER_LEVEL" ] && PS1='(in ranger)'"$PS1"
