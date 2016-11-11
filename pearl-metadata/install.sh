@@ -1,7 +1,11 @@
 function post_install(){
-    ln -s "${PEARL_PKGDIR}/module/scripts/ranger" ${PEARL_HOME}/bin
+    link_to_path "${PEARL_PKGDIR}/module/scripts/ranger"
+}
+
+function post_update(){
+    post_install
 }
 
 function pre_remove(){
-    rm -f ${PEARL_HOME}/bin/ranger
+    unlink_from_path "${PEARL_PKGDIR}/module/scripts/ranger"
 }
