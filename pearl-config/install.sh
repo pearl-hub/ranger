@@ -1,4 +1,5 @@
 function post_install(){
+    info "Installing or updating the ranger git repository..."
     install_or_update_git_repo https://github.com/ranger/ranger.git "${PEARL_PKGVARDIR}/ranger" master
 
     link_to_path "${PEARL_PKGVARDIR}/ranger/ranger.py" "ranger"
