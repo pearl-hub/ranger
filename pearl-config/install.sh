@@ -1,25 +1,14 @@
-function _init(){
+function post_install(){
+    install_or_update_git_repo https://github.com/ranger/ranger.git "${PEARL_PKGVARDIR}/ranger" master
+
     link_to_path "${PEARL_PKGVARDIR}/ranger/ranger.py" "ranger"
 
     mkdir -p ${HOME}/.config/ranger/
     cp -f ${PEARL_PKGDIR}/rifle.conf ${HOME}/.config/ranger/
 }
 
-
-function post_install(){
-    git clone https://github.com/ranger/ranger.git ${PEARL_PKGVARDIR}/ranger
-
-    _init
-}
-
 function post_update(){
-    cd ${PEARL_PKGVARDIR}/ranger
-    git fetch --quiet --all
-    git reset --quiet --hard origin/master
-    git submodule update --quiet --init --recursive
-    git checkout --quiet master
-
-    _init
+    post_install
 }
 
 function pre_remove(){
