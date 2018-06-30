@@ -14,7 +14,7 @@
 # to the original one.
 # This is still beta for Fish!
 #function ranger-cd
-    #set ranger_command "python $PEARL_HOME/packages/ranger/module/scripts/ranger"
+    #set ranger_command "python $PEARL_PKGVARDIR/ranger/scripts/ranger"
 
     ## Checks out into the jobs if the user pressed the C-z key
     #set id (jobs | grep ranger | awk -F "[][]" '{print $2}')

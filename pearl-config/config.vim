@@ -1,4 +1,4 @@
 
-if filereadable($PEARL_HOME."/packages/pearl/ranger/module/examples/vim_file_chooser.vim")
-    source $PEARL_HOME/packages/pearl/ranger/module/examples/vim_file_chooser.vim
+if filereadable($PEARL_PKGVARDIR."/ranger/examples/vim_file_chooser.vim")
+    source $PEARL_PKGVARDIR/ranger/examples/vim_file_chooser.vim
 endif
