@@ -5,7 +5,7 @@ function post_install(){
     # The following cannot be used because the shebang is hardcoded in ranger.py:
     # link_to_path "${PEARL_PKGVARDIR}/ranger/ranger.py" "ranger"
     echo "#!/usr/bin/env bash" > ${PEARL_HOME}/bin/ranger
-    echo "/usr/bin/env python -O ${PEARL_PKGVARDIR}/ranger/ranger.py" >> ${PEARL_HOME}/bin/ranger
+    echo '/usr/bin/env python -O ${PEARL_PKGVARDIR}/ranger/ranger.py "$@"' >> ${PEARL_HOME}/bin/ranger
     chmod +x ${PEARL_HOME}/bin/ranger
 
     mkdir -p ${HOME}/.config/ranger/
